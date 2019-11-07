@@ -1,0 +1,17 @@
+#map {
+  margin: auto;
+  width: 80%;
+  height: 80%;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  padding: 20px;
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+}
