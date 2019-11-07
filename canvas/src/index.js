@@ -7,7 +7,7 @@ canvas.height = window.innerHeight;
 ctx.lineJoin = "round";
 ctx.lineCap = "round";
 ctx.lineWidth = 50;
-ctx.globalCompositeOperation = 'multiply';
+ctx.globalCompositeOperation = 'xor';
 
 let isDrawing = false;
 let lastX = 0;
