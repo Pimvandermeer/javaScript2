@@ -20,6 +20,8 @@
         infoWindow = new google.maps.InfoWindow;
 
         if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(handleLocationSuccess, handleLocationError);
+
          // Step 1: Get current position here and use the handleLocationSuccess
          // and handleLocationError function as callbacks
         } else {
@@ -30,14 +32,15 @@
 
       function handleLocationSuccess(position) {
         var pos = {
-          lat: // Step 2a: add the latitude heres
-          lng: // Step 2b: add the longitude there
+          lat: position.coords.latitude,// Step 2a: add the latitude heres
+          lng: position.coords.longitude// Step 2b: add the longitude there
         };
 
         infoWindow.setPosition(pos);
         infoWindow.setContent('Location found.');
         infoWindow.open(map);
         map.setCenter(pos);
+        alert("Latitude : " + lat + " Longitude: " + lng);
       };
 
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
@@ -46,12 +49,12 @@
                               'Error: The Geolocation service failed.' :
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
-      }
+      }      
     </script>
     <script
       async
       defer
-      src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBr60oAviSBuR1aBjwGHsIVu_w2RYXNuIg&callback=initMap"
     ></script>
   </body>
 </html>
