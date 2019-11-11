@@ -19,11 +19,14 @@
         });
         infoWindow = new google.maps.InfoWindow;
 
-        if (navigator.geolocation) {
-          navigator.geolocation.getCurrentPosition(handleLocationSuccess, handleLocationError);
+        var options = {
+          enableHighAccuracy: true,
+          timeout: 2000,
+          maximumAge: 0
+        };
 
-         // Step 1: Get current position here and use the handleLocationSuccess
-         // and handleLocationError function as callbacks
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(handleLocationSuccess, handleLocationError, options);
         } else {
           // Browser doesn't support Geolocation
           handleLocationError(false, infoWindow, map.getCenter());
@@ -40,7 +43,6 @@
         infoWindow.setContent('Location found.');
         infoWindow.open(map);
         map.setCenter(pos);
-        alert("Latitude : " + lat + " Longitude: " + lng);
       };
 
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
@@ -49,7 +51,7 @@
                               'Error: The Geolocation service failed.' :
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
-      }      
+      }
     </script>
     <script
       async
