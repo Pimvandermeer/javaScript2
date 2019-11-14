@@ -1,0 +1,28 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  padding-top: 28px;
+  margin: 0 auto;
+}
+.output-cont {
+  margin-left: 12%;
+  margin-top: 28px;
+}
+
+.output-cont h3 {
+  width: 200px;
+  height: 100%;
+}
+.output-cont button {
+  padding: 4px 8px;
+  font-size: 1.1rem;
+  font-family: sans-serif;
+}
+button {
+  width: 300px;
+  border: none;
+  background-color: #37cfb1;
+  color: white;
+  padding: 25px;
+  border-radius: 3px;
+}
