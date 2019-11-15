@@ -1,0 +1,7 @@
+body {
+  font-family: sans-serif;
+}
+/* This puts titles always on a separate line from thumbnails */
+#videos-list img {
+  display: block;
+}
