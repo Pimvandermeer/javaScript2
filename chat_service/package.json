@@ -1,0 +1,15 @@
+{
+  "name": "chat_service",
+  "version": "1.0.0",
+  "description": "a simple chat service",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pim van der Meer",
+  "license": "ISC",
+  "dependencies": {
+    "mkdirp": "^0.5.1",
+    "rimraf": "^3.0.0"
+  }
+}

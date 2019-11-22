@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bank form</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="src/styles.css" />
+  </head>
+  <body>
+    <div class="form-style-5">
+      <form>
+        <fieldset>
+          <legend><span class="number">#</span> Your Info</legend>
+
+          <input type="text" id="name" name="name" placeholder="Name" />
+          <input type="email" id="email" name="name" placeholder="Email" />
+          <input
+            type="text"
+            id="address"
+            name="address"
+            placeholder="Address"
+          />
+          <input
+            type="text"
+            id="postalcode"
+            name="postalcode"
+            placeholder="Postalcode"
+          />
+          <input type="text" id="stad" name="city" placeholder="City" />
+          <input type="text" id="name" name="name" placeholder="IBAN number" />
+          <!-- place form input here to ask about
+          2. email
+          3. address
+          4. iban number
+         -->
+        </fieldset>
+        <input type="submit" value="Apply" onclick="checkString()" />
+      </form>
+    </div>
+    <script src="/src/index.js"></script>
+  </body>
+</html>
